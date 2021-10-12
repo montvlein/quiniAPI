@@ -1,0 +1,28 @@
+{
+  "name": "quiniapi",
+  "version": "0.1.0",
+  "description": "Api rest that give 20 random number four times a day",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/montvlein/quiniAPI.git"
+  },
+  "author": "montvlein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/montvlein/quiniAPI/issues"
+  },
+  "homepage": "https://github.com/montvlein/quiniAPI#readme"
+}
