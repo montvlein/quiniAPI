@@ -1,4 +1,7 @@
+const path = require('path')
+const pathHistory = `${path.dirname(__dirname)}/data/history.json`
 const history = require('./../data/history.json')
+const fs = require('fs')
 
 function getAll(req, res) {
     try {
@@ -38,8 +41,14 @@ function getByDate(req, res) {
     }
 }
 
+function addGame(game){
+    history.push(game)
+    fs.writeFileSync(pathHistory,JSON.stringify(history))
+}
+
 module.exports = {
     getAll,
     getLates,
-    getByDate
+    getByDate,
+    addGame
 }
