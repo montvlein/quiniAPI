@@ -1,6 +1,7 @@
 const express = require('express')
 const config = require('./config')
 const app = express()
+const game = require('./controllers/game')
 
 app.listen(config, () => {
     console.log(`\nserver is running on ${config.host}:${config.port}`);
@@ -19,3 +20,5 @@ app.use(function(err, req, res, next) {
      res.status(err.status || 500).send(err);
      res.end();
 });
+
+game()
