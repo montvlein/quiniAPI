@@ -14,7 +14,7 @@ router.get('/', (req, res)=>{
     }
 })
 router.get('/all', controller.getAll)
-router.get('/lates', controller.getLates)
+router.get('/last', controller.getLast)
 router.get('/date/:date', controller.getByDate)
 
 module.exports = router

@@ -15,13 +15,13 @@ function getAll(req, res) {
     }
 }
 
-function getLates(req, res){
-    let lates = history[history.length-1]
+function getLast(req, res){
+    let last = history[history.length-1]
     try {
         res
         .header("Access-Control-Allow-Origin", "*")
         .status(200)
-        .send({ lates })
+        .send({ last })
     }
     catch(err) {
         res.status(500).send(err)
@@ -48,7 +48,7 @@ function addGame(game){
 
 module.exports = {
     getAll,
-    getLates,
+    getLast,
     getByDate,
     addGame
 }

@@ -2,8 +2,7 @@ const tipoConcurso = require('./type')
 
 class sorteo {
     constructor() {
-        this.fecha = new Date()
-        this.tipo = this.tipo(this.fecha).nombre
+        this.fecha = new Date().toUTCString()
         this.numerosGanadores = null
     }
 
@@ -11,9 +10,6 @@ class sorteo {
         this.numerosGanadores = new numerosGanadores()
     }
 
-    tipo(hora) {
-        return tipoConcurso.find(tipo => tipo.horario === `${hora.getHours()}:${hora.getMinutes()}:${hora.getSeconds()}`)
-    }
 }
 
 class numerosGanadores {

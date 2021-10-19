@@ -14,11 +14,12 @@ const tipoConcurso = [
     {
         nombre: 'Nocturna',
         horario: '21:0:0'
-    },
-    {
-        nombre: 'Test',
-        horario: `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
     }
+    // ,
+    // {
+    //     nombre: 'Test',
+    //     horario: `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
+    // }
 ]
 
 module.exports = tipoConcurso
