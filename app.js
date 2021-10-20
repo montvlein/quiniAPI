@@ -1,3 +1,4 @@
+const serverless = require('serverless-http')
 const express = require('express')
 const config = require('./config')
 const app = express()
@@ -27,3 +28,5 @@ setInterval( () => {
     date = `${new Date().getUTCHours()}:${new Date().getUTCMinutes()}:${new Date().getUTCSeconds()}`
     if (date === '12:0:0' || date === '15:0:0' || date === '17:30:0' || date === '21:0:0') { game() } 
 }, 1000)
+
+module.exports.handler = serverless(app)
